@@ -11,6 +11,7 @@ const Input = ({
   error,
   password,
   borderColor,
+  height,
   onFocus = () => {},
   ...props
 }) => {
@@ -18,8 +19,8 @@ const Input = ({
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <View style={{ height: 90, marginBottom: 20 }}>
-      <Text style={style.label}>{lable}</Text>
+    <View style={{ height: height ? height : 90, marginBottom: 20 }}>
+      {lable && <Text style={style.label}>{lable}</Text>}
       <View
         style={[
           style.inputContainer,

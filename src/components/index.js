@@ -4,6 +4,7 @@ import Input from "./Input";
 import Loader from "./Loader";
 import TitleName from "./TitleName";
 
+import BoookingItem from "./BoookingItem";
 import ReviewItem from "./ReviewItem";
 import SearchResult from "./SearchResult";
 import SportCenterItem from "./SportCenterItem";
@@ -19,4 +20,5 @@ export {
   SearchResult,
   SportFieldItem,
   ReviewItem,
+  BoookingItem,
 };

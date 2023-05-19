@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import { COLORS } from "./src/constants";
 import {
   BookingCalendarScreen,
+  BookingDetailScreen,
   BookingManagerScreen,
   CreateSportCenterScreen,
   CustomerInformationScreen,
@@ -200,6 +201,11 @@ export default function App() {
                 options={{ headerShown: false }}
                 name="BookingCalendar"
                 component={BookingCalendarScreen}
+              />
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="BookingDetail"
+                component={BookingDetailScreen}
               />
               <Stack.Screen
                 options={{ headerShown: false }}

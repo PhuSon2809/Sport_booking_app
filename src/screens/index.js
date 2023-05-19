@@ -18,6 +18,7 @@ import ServiceScreen from "./owner/ServiceScreen";
 import SportCenterScreen from "./owner/SportCenterScreen";
 import SportFieldDetailScreen from "./owner/SportFieldDetailScreen";
 import StatisticScreen from "./owner/StatisticScreen";
+import BookingDetailScreen from "./owner/BookingDetailScreen";
 
 export {
   HomeScreen,
@@ -39,4 +40,5 @@ export {
   MapScreen,
   ListSportFieldScreen,
   SportFieldDetailScreen,
+  BookingDetailScreen,
 };

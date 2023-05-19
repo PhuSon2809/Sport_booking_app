@@ -55,22 +55,18 @@ const SportFieldDetailScreen = () => {
         </View>
 
         <View className="flex-row items-center justify-between p-4 absolute w-full">
-          <View className="bg-[#00C187] w-10 h-10 rounded-full flex items-center justify-center opacity-80">
-            <AntDesign
-              name="arrowleft"
-              size={24}
-              color="white"
-              onPress={() => navigation.navigate("ListSportField")}
-            />
-          </View>
-          <View className="bg-[#00C187] w-10 h-10 rounded-full flex items-center justify-center opacity-80">
-            <Ionicons
-              name="notifications-outline"
-              size={24}
-              color="white"
-              onPress={() => navigation.navigate("Notification")}
-            />
-          </View>
+          <Pressable
+            className="bg-[#00C187] w-10 h-10 rounded-full flex items-center justify-center opacity-80"
+            onPress={() => navigation.navigate("ListSportField")}
+          >
+            <AntDesign name="arrowleft" size={24} color="white" />
+          </Pressable>
+          <Pressable
+            className="bg-[#00C187] w-10 h-10 rounded-full flex items-center justify-center opacity-80"
+            onPress={() => navigation.navigate("Notification")}
+          >
+            <Ionicons name="notifications-outline" size={24} color="white" />
+          </Pressable>
         </View>
       </View>
 

@@ -72,7 +72,6 @@ const MapScreen = () => {
     <View>
       <MapView ref={mapView} style={{ width: "100%", height: "100%" }}>
         {listSportCenters.map((center, index) => {
-          console.log(center);
           return (
             <Marker
               key={index}

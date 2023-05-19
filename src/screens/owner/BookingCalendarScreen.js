@@ -69,7 +69,7 @@ const BookingCalendarScreen = () => {
       <Pressable
         className="bg-white flex-1 rounded-xl border-2 border-[#00c1879f] p-3 z-10 mr-5 mt-2 mb-2 space-y-1"
         style={[{ elevation: 2 }]}
-        onPress={() => Alert.alert(reservation.name)}
+        onPress={() => navigation.navigate("BookingDetail")}
       >
         <Text className="text-[18px] font-bold tracking-wide" style={{ color }}>
           {reservation.name}

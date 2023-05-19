@@ -8,6 +8,8 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "13.0359",
+    longitude: "77.6431",
   },
   {
     id: "2",
@@ -16,6 +18,8 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "12.9784",
+    longitude: "77.6408",
   },
   {
     id: "3",
@@ -24,6 +28,8 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "13.1989",
+    longitude: "77.7068",
   },
   {
     id: "4",
@@ -32,6 +38,8 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "18.0359",
+    longitude: "97.6431",
   },
   {
     id: "5",
@@ -40,6 +48,8 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "20.0359",
+    longitude: "87.6431",
   },
   {
     id: "6",
@@ -48,5 +58,7 @@ export const listSportCenters = [
     image: images.sanBong,
     star: "5",
     slot: 5,
+    latitude: "25.0359",
+    longitude: "66.6431",
   },
 ];

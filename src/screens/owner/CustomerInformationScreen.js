@@ -1,8 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
-import React, { useLayoutEffect } from "react";
-import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import React, { useLayoutEffect } from "react";
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import { Input, UserBookingItem } from "../../components";
 import { COLORS } from "../../constants";
+import { ListUsers } from "../../assets/data/listUser";
+import { FlatList } from "react-native";
 
 const CustomerInformationScreen = () => {
   const navigation = useNavigation();
@@ -31,6 +34,7 @@ const CustomerInformationScreen = () => {
           style={{
             marginRight: 12,
           }}
+          onPress={() => navigation.navigate("Notification")}
         />
       ),
       headerLeft: () => (
@@ -45,9 +49,31 @@ const CustomerInformationScreen = () => {
   }, []);
 
   return (
-    <View>
-      <Text>CustomerInformationScreen</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-[#20224A] relative">
+      <View className="flex-1 bg-[#ECF3FF] rounded-t-3xl px-5">
+        <View className="mt-5">
+          <Input
+            onChangeText={(text) => setInputSearch(text)}
+            placeholder="Enter sport center name"
+            icon={
+              <Ionicons name="ios-search" size={25} color={COLORS.primary} />
+            }
+            borderColor={COLORS.primary}
+            height={70}
+          />
+        </View>
+
+        <View className="flex-1">
+          <FlatList
+            data={ListUsers}
+            keyExtractor={(user) => user.id}
+            renderItem={(user) => {
+              return <UserBookingItem user={user.item} />;
+            }}
+          ></FlatList>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 

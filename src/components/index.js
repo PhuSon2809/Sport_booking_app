@@ -9,6 +9,7 @@ import ReviewItem from "./ReviewItem";
 import SearchResult from "./SearchResult";
 import SportCenterItem from "./SportCenterItem";
 import SportFieldItem from "./SportFieldItem";
+import UserBookingItem from "./UserBookingItem";
 
 export {
   ButtonCustom,
@@ -21,4 +22,5 @@ export {
   SportFieldItem,
   ReviewItem,
   BoookingItem,
+  UserBookingItem,
 };

@@ -2,15 +2,15 @@ import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import React, { useLayoutEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { COLORS } from "../../constants";
+import { COLORS } from "../constants";
 
-const ServiceScreen = () => {
+const NotificationScreen = () => {
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: true,
-      title: "Service",
+      title: "Statistic",
       headerTitleAlign: "center",
       headerTitleStyle: {
         fontSize: 22,
@@ -31,7 +31,6 @@ const ServiceScreen = () => {
           style={{
             marginRight: 12,
           }}
-          onPress={() => navigation.navigate("Notification")}
         />
       ),
       headerLeft: () => (
@@ -47,11 +46,11 @@ const ServiceScreen = () => {
 
   return (
     <View>
-      <Text>ServiceScreen</Text>
+      <Text>NotificationScreen</Text>
     </View>
   );
 };
 
-export default ServiceScreen;
+export default NotificationScreen;
 
 const styles = StyleSheet.create({});

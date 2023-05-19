@@ -1,8 +1,10 @@
 import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
+import DateTimePicker from "@react-native-community/datetimepicker";
 import { useNavigation } from "@react-navigation/native";
 import React, { useLayoutEffect, useState } from "react";
 import {
   Dimensions,
+  FlatList,
   Platform,
   Pressable,
   SafeAreaView,
@@ -11,11 +13,9 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { ListBookings } from "../../assets/data/bookings";
 import { BoookingItem, Input } from "../../components";
 import { COLORS } from "../../constants";
-import DateTimePicker from "@react-native-community/datetimepicker";
-import { ListBookings } from "../../assets/data/bookings";
-import { FlatList } from "react-native";
 
 const listTab = [
   {
@@ -57,6 +57,7 @@ const BookingManagerScreen = () => {
           style={{
             marginRight: 12,
           }}
+          onPress={() => navigation.navigate("Notification")}
         />
       ),
       headerLeft: () => (
@@ -73,36 +74,40 @@ const BookingManagerScreen = () => {
   const [tab, setTab] = useState("accepted");
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(false);
-  const [valueDate, setValueDate] = useState();
+  const [valueDate, setValueDate] = useState("Choose a date");
+
+  console.log(show);
 
   const setTabFilter = (tabPath) => {
     setTab(tabPath);
   };
 
-  const onChange = (event, selectedDate) => {
+  const onChange = (e, selectedDate) => {
+    setValueDate(new Date(selectedDate));
+  };
+
+  const onAndroidChange = (event, selectedDate) => {
     const currentDate = selectedDate || date;
-    setShow(Platform.OS === "android");
+    setShow(Platform.OS === "ios");
     setDate(currentDate);
 
     let tempDate = new Date(currentDate);
     let fDate =
       tempDate.getDate() +
-      "/" +
+      "-0" +
       (tempDate.getMonth() + 1) +
-      "/" +
+      "-" +
       tempDate.getFullYear();
 
     setValueDate(fDate);
-
-    console.log(fDate);
   };
 
   const showMode = () => {
-    setShow(true);
+    setShow(!show);
   };
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-white">
       {/* Tab */}
       <View className="flex-row items-center justify-center border-b-2 border-gray-300">
         {listTab.map((item, index) => (
@@ -130,7 +135,7 @@ const BookingManagerScreen = () => {
           value={valueDate}
           borderColor={COLORS.primary}
           icon={<Feather name="calendar" size={30} color={COLORS.black} />}
-          className="text-[16px] ml-1"
+          className="text-[16px] text-black ml-1"
           height={50}
         />
       </Pressable>
@@ -138,10 +143,12 @@ const BookingManagerScreen = () => {
       {show && (
         <DateTimePicker
           testID="dateTimePicker"
-          value={valueDate}
+          value={date}
           mode="date"
           display="default"
-          onChange={onChange}
+          negativeButton={{ label: "Cancel", textColor: "red" }}
+          positiveButton={{ label: "OK", textColor: "green" }}
+          onChange={Platform.OS === "ios" ? onChange : onAndroidChange}
         />
       )}
 

@@ -1,6 +1,7 @@
 import HomeScreen from "./HomeScreen";
 import LoginScreen from "./LoginScreen";
 import MapScreen from "./MapScreen";
+import NotificationScreen from "./NotificationScreen";
 import OnboardingScreen from "./OnboardingScreen";
 import ProfileScreen from "./ProfileScreen";
 import RegistrationScreen from "./RegistrationScreen";
@@ -15,8 +16,8 @@ import OwnerHomeScreen from "./owner/OwnerHomeScreen";
 import OwnerSearchScreen from "./owner/OwnerSearchScreen";
 import ServiceScreen from "./owner/ServiceScreen";
 import SportCenterScreen from "./owner/SportCenterScreen";
-import StatisticScreen from "./owner/StatisticScreen";
 import SportFieldDetailScreen from "./owner/SportFieldDetailScreen";
+import StatisticScreen from "./owner/StatisticScreen";
 
 export {
   HomeScreen,
@@ -25,6 +26,7 @@ export {
   LoginScreen,
   RegistrationScreen,
   ProfileScreen,
+  NotificationScreen,
   OwnerHomeScreen,
   OwnerSearchScreen,
   CreateSportCenterScreen,

@@ -10,7 +10,7 @@ const BoookingItem = ({ booking }) => {
 
   return (
     <Pressable
-      className="bg-white rounded-xl border-gray-300 border-2 p-4 mb-5"
+      className="bg-white rounded-xl border-[#BBBBC2] border-2 p-4 mb-5"
       onPress={() => {}}
     >
       <View className="flex-row items-center justify-between mb-4">
@@ -24,12 +24,16 @@ const BoookingItem = ({ booking }) => {
         </View>
       </View>
 
-      <Divide backgroundColor={COLORS.gray} height={2} />
-
-      <View className="flex-row items-center gap-5 justify-between pt-2">
-        <View className="space-y-1">
-          <Text className="text-[18px] font-bold">{booking.name}</Text>
-          <Text className="text-[16px] text-gray-500">{booking.address}</Text>
+      <Divide backgroundColor="#BBBBC2" height={2} />
+      <View className="space-y-1 mt-3">
+        <Text className="text-[18px] font-bold">{booking.name}</Text>
+        <Text className="text-[16px] text-gray-500">{booking.address}</Text>
+      </View>
+      <View className="flex-row items-end gap-5 justify-between pt-3">
+        <View className="bg-[#00c1873f] w items-center justify-center rounded-lg p-3 py-2">
+          <Text className="text-[15px] text-[#00C187] font-semibold">
+            Accepted
+          </Text>
         </View>
         <Pressable className="rounded-full p-2 bg-[#00c18741]">
           <Entypo name="dots-three-vertical" size={20} color={COLORS.primary} />

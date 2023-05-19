@@ -117,6 +117,8 @@ const RegistrationScreen = ({ navigation }) => {
               lable="Fullname"
               placeholder="Enter your fullname"
               error={errors.fullname}
+              marginBottom={20}
+              height={90}
             />
             <Input
               onChangeText={(text) => handleOnchange(text, "phone")}
@@ -131,6 +133,8 @@ const RegistrationScreen = ({ navigation }) => {
               lable="phone"
               placeholder="Enter your phone"
               error={errors.phone}
+              marginBottom={20}
+              height={90}
             />
             <Input
               onChangeText={(text) => handleOnchange(text, "email")}
@@ -145,6 +149,8 @@ const RegistrationScreen = ({ navigation }) => {
               lable="Email"
               placeholder="Enter your email"
               error={errors.email}
+              marginBottom={20}
+              height={90}
             />
             <Input
               onChangeText={(text) => handleOnchange(text, "password")}
@@ -160,6 +166,8 @@ const RegistrationScreen = ({ navigation }) => {
               placeholder="Enter your password"
               error={errors.password}
               password
+              marginBottom={20}
+              height={90}
             />
             <View className="flex-row items-center">
               <Text style={styles.label}>You are</Text>

@@ -15,6 +15,7 @@ import {
   ListSportFieldScreen,
   LoginScreen,
   MapScreen,
+  NotificationScreen,
   OnboardingScreen,
   OwnerHomeScreen,
   OwnerSearchScreen,
@@ -155,6 +156,11 @@ export default function App() {
                 options={{ headerShown: false }}
                 name="Map"
                 component={MapScreen}
+              />
+              <Stack.Screen
+                options={{ headerShown: false }}
+                name="Notification"
+                component={NotificationScreen}
               />
 
               {/* User */}

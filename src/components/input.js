@@ -12,6 +12,7 @@ const Input = ({
   password,
   borderColor,
   height,
+  marginBottom,
   onFocus = () => {},
   ...props
 }) => {
@@ -19,7 +20,12 @@ const Input = ({
   const [isFocused, setIsFocused] = useState(false);
 
   return (
-    <View style={{ height: height ? height : 90, marginBottom: 20 }}>
+    <View
+      style={{
+        height: height ? height : 0,
+        marginBottom: marginBottom ? marginBottom : 0,
+      }}
+    >
       {lable && <Text style={style.label}>{lable}</Text>}
       <View
         style={[

@@ -34,6 +34,7 @@ const OwnerSearchScreen = () => {
           style={{
             marginRight: 12,
           }}
+          onPress={() => navigation.navigate("Notification")}
         />
       ),
     });
@@ -42,12 +43,17 @@ const OwnerSearchScreen = () => {
   return (
     <SafeAreaView className="flex-1 bg-[#20224A] relative">
       <View className="flex-1 bg-[#ECF3FF] rounded-t-3xl px-5">
-        <Input
-          onChangeText={(text) => setInputSearch(text)}
-          placeholder="Enter sport center name"
-          icon={<Ionicons name="ios-search" size={25} color={COLORS.primary} />}
-          borderColor={COLORS.primary}
-        />
+        <View className="my-5">
+          <Input
+            onChangeText={(text) => setInputSearch(text)}
+            placeholder="Enter sport center name"
+            icon={
+              <Ionicons name="ios-search" size={25} color={COLORS.primary} />
+            }
+            borderColor={COLORS.primary}
+            height={90}
+          />
+        </View>
 
         <View className="flex-1">
           {/* <FlatList

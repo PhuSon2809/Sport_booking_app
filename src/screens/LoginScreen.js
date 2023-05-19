@@ -113,6 +113,8 @@ const LoginScreen = ({ navigation }) => {
               lable="Email"
               placeholder="Enter your email"
               error={errors.email}
+              marginBottom={20}
+              height={90}
             />
             <Input
               onChangeText={(text) => handleOnchange(text, "password")}
@@ -128,6 +130,8 @@ const LoginScreen = ({ navigation }) => {
               placeholder="Enter your password"
               error={errors.password}
               password
+              marginBottom={20}
+              height={90}
             />
             <ButtonCustom
               title="Log In"

@@ -64,7 +64,12 @@ const SportFieldDetailScreen = () => {
             />
           </View>
           <View className="bg-[#00C187] w-10 h-10 rounded-full flex items-center justify-center opacity-80">
-            <Ionicons name="notifications-outline" size={24} color="white" />
+            <Ionicons
+              name="notifications-outline"
+              size={24}
+              color="white"
+              onPress={() => navigation.navigate("Notification")}
+            />
           </View>
         </View>
       </View>

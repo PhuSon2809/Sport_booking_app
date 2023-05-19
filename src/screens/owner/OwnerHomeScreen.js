@@ -41,6 +41,7 @@ const OwnerHomeScreen = ({ navigation }) => {
           style={{
             marginRight: 12,
           }}
+          onPress={() => navigation.navigate("Notification")}
         />
       ),
     });

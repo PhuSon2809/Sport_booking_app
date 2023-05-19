@@ -55,6 +55,7 @@ const ListSportFieldScreen = () => {
           style={{
             marginRight: 12,
           }}
+          onPress={() => navigation.navigate("Notification")}
         />
       ),
       headerLeft: () => (
